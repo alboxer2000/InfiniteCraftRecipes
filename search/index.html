@@ -59,12 +59,12 @@
     <script>
       const f = document.getElementById('form');
       const q = document.getElementById('query');
-      const google = 'https://www.google.com/search?q=-site%3Ainfinite-craft-recipes.vercel.app%20-site%3Areddit.com%20site%3A+';
+      const google = 'https://www.google.com/search?q=-site%3Ainfinite-craft-recipes.vercel.app+-site%3Areddit.com+site%3Ainfinite-craft-recipes-delta.vercel.app';
       const site = 'infinite-craft-recipes-delta.vercel.app';
 
       function submitted(event) {
         event.preventDefault();
-        const url = google + site + + q.value;
+        const url = google + '+' + q.value;
         const win = window.open(url, '_blank');
         win.focus();
       }
